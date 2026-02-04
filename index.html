@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Pública - Bootstrap</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    .hero-title { letter-spacing: .5px; }
+    .soft-card { border: 0; box-shadow: 0 10px 30px rgba(0,0,0,.08); border-radius: 1rem; }
+    footer a { text-decoration: none; }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <!-- a,b,c,d: Navbar (logo + idiomas + buscador + menú desplegable/responsivo) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-semibold" href="#">
+        <span class="me-2">🟦</span>EjercicioBootstrap
+      </a>
+
+      <!-- Toggle responsive -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <!-- Menú desplegable -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Secciones
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#bloques5050">Bloques 50/50</a></li>
+              <li><a class="dropdown-item" href="#cuatroBloques">4 Bloques</a></li>
+              <li><a class="dropdown-item" href="#tabsAcordeon">Tabs / Acordeón</a></li>
+              <li><a class="dropdown-item" href="#loginMapa">Login & Mapa</a></li>
+            </ul>
+          </li>
+
+          <!-- Idiomas -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Idioma
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">ES</a></li>
+              <li><a class="dropdown-item" href="#">EN</a></li>
+              <li><a class="dropdown-item" href="#">EU</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <!-- Buscador -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- e: Carrusel fotográfico -->
+  <div class="container mt-4">
+    <div id="carouselHome" class="carousel slide soft-card overflow-hidden" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/seed/bootstrap1/1400/500" class="d-block w-100" alt="Slide 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Diseño responsive</h5>
+            <p>Componentes listos para usar con Bootstrap.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/seed/bootstrap2/1400/500" class="d-block w-100" alt="Slide 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>UI moderna</h5>
+            <p>Layout limpio y ordenado para prácticas.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/seed/bootstrap3/1400/500" class="d-block w-100" alt="Slide 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Componentes</h5>
+            <p>Tabs, acordeón, formularios, footer…</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- f: Título/eslogan animado (animate.css) -->
+  <section class="container my-5 text-center">
+    <h1 class="hero-title fw-bold animate__animated animate__fadeInDown">
+      Build fast, responsive sites with Bootstrap
+    </h1>
+    <p class="text-secondary mb-0 animate__animated animate__fadeInUp">
+      Home pública con componentes Bootstrap 5 + animate.css
+    </p>
+  </section>
+
+  <!-- g: Dos bloques 50-50 texto e imagen -->
+  <section id="bloques5050" class="container my-5">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="p-4 bg-white soft-card">
+          <h3 class="fw-semibold">Bloque 50/50 (Texto)</h3>
+          <p class="text-secondary mb-0">
+            Primer bloque 50/50 con imagen a la derecha y texto a la izquierda.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="soft-card overflow-hidden">
+          <img src="https://picsum.photos/seed/left5050/900/600" class="img-fluid" alt="Imagen 50/50">
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-center mt-2">
+      <div class="col-lg-6 order-lg-2">
+        <div class="p-4 bg-white soft-card">
+          <h3 class="fw-semibold">Bloque 50/50 (Texto 2)</h3>
+          <p class="text-secondary mb-0">
+            Segundo bloque 50/50 con el orden invertido en escritorio (imagen a la izquierda / texto a la derecha).
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="soft-card overflow-hidden">
+          <img src="https://picsum.photos/seed/right5050/900/600" class="img-fluid" alt="Imagen 50/50 2">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- h: 4 bloques responsivos -->
+  <section id="cuatroBloques" class="container my-5">
+    <div class="d-flex align-items-end justify-content-between mb-3">
+      <h2 class="h4 fw-semibold mb-0">4 bloques responsivos</h2>
+      <span class="text-secondary small">col-lg-3 / col-md-6</span>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white soft-card h-100">
+          <h5 class="fw-semibold">Bloque 1</h5>
+          <p class="text-secondary mb-0">Contenido breve y claro.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white soft-card h-100">
+          <h5 class="fw-semibold">Bloque 2</h5>
+          <p class="text-secondary mb-0">Se adapta a cualquier pantalla.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white soft-card h-100">
+          <h5 class="fw-semibold">Bloque 3</h5>
+          <p class="text-secondary mb-0">Diseño limpio con cards.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white soft-card h-100">
+          <h5 class="fw-semibold">Bloque 4</h5>
+          <p class="text-secondary mb-0">Listo para tu práctica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- i: Bloque con pestañas o acordeones (te pongo ambos: tabs + acordeón) -->
+  <section id="tabsAcordeon" class="container my-5">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="bg-white soft-card p-4">
+          <h2 class="h5 fw-semibold">Pestañas (Tabs)</h2>
+
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1" type="button">Tab 1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2" type="button">Tab 2</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3" type="button">Tab 3</button>
+            </li>
+          </ul>
+
+          <div class="tab-content border border-top-0 p-3 rounded-bottom">
+            <div class="tab-pane fade show active" id="tab1">
+              <p class="text-secondary mb-0">Contenido de la pestaña 1.</p>
+            </div>
+            <div class="tab-pane fade" id="tab2">
+              <p class="text-secondary mb-0">Contenido de la pestaña 2.</p>
+            </div>
+            <div class="tab-pane fade" id="tab3">
+              <p class="text-secondary mb-0">Contenido de la pestaña 3.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="bg-white soft-card p-4">
+          <h2 class="h5 fw-semibold">Acordeón</h2>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acc1">
+                  Sección 1
+                </button>
+              </h2>
+              <div id="acc1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-secondary">
+                  Texto de la sección 1 del acordeón.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc2">
+                  Sección 2
+                </button>
+              </h2>
+              <div id="acc2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-secondary">
+                  Texto de la sección 2 del acordeón.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acc3">
+                  Sección 3
+                </button>
+              </h2>
+              <div id="acc3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body text-secondary">
+                  Texto de la sección 3 del acordeón.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- j: Dos bloques responsivos con formulario login y mapa (imagen) -->
+  <section id="loginMapa" class="container my-5">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="bg-white soft-card p-4 h-100">
+          <h2 class="h5 fw-semibold">Login</h2>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Usuario</label>
+              <input class="form-control" type="text" placeholder="usuario">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Contraseña</label>
+              <input class="form-control" type="password" placeholder="••••••••">
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-primary">Entrar</button>
+              <button type="button" class="btn btn-outline-secondary">Crear cuenta</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="bg-white soft-card overflow-hidden h-100">
+          <img src="https://picsum.photos/seed/mapa/900/600" class="img-fluid" alt="Mapa (imagen)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- k: Pie diferenciado con tres bloques -->
+  <footer class="bg-dark text-light mt-5">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-semibold">Contacto</h5>
+          <p class="text-secondary mb-0">email@ejemplo.com</p>
+          <p class="text-secondary mb-0">+34 600 000 000</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-semibold">Enlaces</h5>
+          <ul class="list-unstyled mb-0">
+            <li><a class="text-secondary" href="#bloques5050">Bloques 50/50</a></li>
+            <li><a class="text-secondary" href="#cuatroBloques">4 Bloques</a></li>
+            <li><a class="text-secondary" href="#tabsAcordeon">Tabs/Acordeón</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-semibold">Legal</h5>
+          <p class="text-secondary mb-0">© 2026 - Práctica Bootstrap</p>
+          <p class="text-secondary mb-0">Aviso legal · Privacidad</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
